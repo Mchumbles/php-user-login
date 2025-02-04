@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $pdo->commit();
 
         echo "Registration successful!";
+        echo '<p><a href="../index.php">Back to Home Page</a></p>';
     } catch (PDOException $error) {
         $pdo->rollBack();
         echo "Error: " . $error->getMessage();
